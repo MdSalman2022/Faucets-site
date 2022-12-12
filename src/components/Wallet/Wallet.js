@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { AiFillWarning } from 'react-icons/ai';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -8,6 +8,7 @@ import Button from 'react-bootstrap/Button';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Table from 'react-bootstrap/Table';
+import { Context } from '../../contexts/Contexts';
 
 function onChange(value) {
     console.log("Captcha value:", value);
@@ -15,13 +16,17 @@ function onChange(value) {
 
 const Wallet = () => {
 
+    const { currency } = useContext(Context)
 
-    const [key, setKey] = useState('home');
+
+    console.log(currency)
+
+    const [key, setKey] = useState('eth');
 
     return (
         <div>
             <div className='box-bg p-3 mt-3'>
-                <p className='bg p-2'> <AiFillWarning /> Your wallet is connected to Ethereum Kovan, so you are requesting Ethereum Kovan Link/ETH.</p>
+                <p className='bg p-2'><AiFillWarning />  Your wallet is connected to <span className="fw-bold"> {`${currency}`}</span> , so you are requesting <span className="fw-bold"> {`${currency}`}</span> Link/ETH.</p>
                 <Form className='w-50'>
                     <Form.Label htmlFor="basic-url">Wallet Address</Form.Label>
                     <InputGroup className="mb-3">
@@ -51,7 +56,7 @@ const Wallet = () => {
                         className="mb-3 "
                         variant="pills"
                     >
-                        <Tab eventKey="eth" title="ETH Transaction History" variant="pills">
+                        <Tab eventKey="eth" title="ETH Transaction History">
                             <Table bordered className='text-center'>
                                 <thead>
                                     <tr>

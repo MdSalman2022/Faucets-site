@@ -1,0 +1,33 @@
+.bg{
+    background-color: #EEF2FE;
+}
+
+.box-bg{
+    background-color: #fff ;
+}
+
+.text-color{
+    color: #9b1fe9;
+}
+
+.btn{
+    background-color: #9b1fe9;
+    
+}
+
+.btn:hover{
+    background-color: #9b1fe9;
+
+}
+
+.btn-2{
+    background-color: #fff;
+    color: black;
+}
+
+
+.btn-2:hover{
+    background-color: #fff;
+    color: black;
+    
+}
