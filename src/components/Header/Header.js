@@ -4,9 +4,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { FaEthereum } from 'react-icons/fa';
-import Button from 'react-bootstrap/Button';
-import './Header.css'
 import { FaWallet } from 'react-icons/fa';
+import './Header.css'
 
 
 const Header = () => {
@@ -15,9 +14,9 @@ const Header = () => {
         <Navbar collapseOnSelect expand="lg" bg="white" variant="light">
 
             <Container className='d-flex justify-content-between '>
-                <Navbar.Brand href="#home" className='fs-3 text-primary'>Faucets</Navbar.Brand>
+                <Navbar.Brand href="#home"><p className='fs-3 fw-semibold text-color'>Faucets</p></Navbar.Brand>
                 <div className='d-flex align-items-center'>
-                    <Nav>
+                    <Nav className='border'>
                         <NavDropdown title=" Ethereum Kovan" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Arbitrum Rinkby</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Avalanche Fuji</NavDropdown.Item>
@@ -30,7 +29,7 @@ const Header = () => {
                         </NavDropdown>
                     </Nav>
                     <Nav>
-                        <Nav.Link href="#deets"> <Button className="wallet-btn"> <FaWallet /> Connect Wallet</Button></Nav.Link>
+                        <Nav.Link href="#deets"> <div className="wallet-btn"> <FaWallet /> Connect Wallet</div></Nav.Link>
                     </Nav>
                     <Nav>
                         <NavDropdown title="Profile" id="collasible-nav-dropdown">
