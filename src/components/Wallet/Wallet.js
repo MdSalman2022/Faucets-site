@@ -20,8 +20,7 @@ const Wallet = () => {
 
     return (
         <div>
-            <div className='box-bg p-3'>
-                <br />
+            <div className='box-bg p-3 mt-3'>
                 <p className='bg p-2'> <AiFillWarning /> Your wallet is connected to Ethereum Kovan, so you are requesting Ethereum Kovan Link/ETH.</p>
                 <Form className='w-50'>
                     <Form.Label htmlFor="basic-url">Wallet Address</Form.Label>
@@ -48,9 +47,11 @@ const Wallet = () => {
                         id="controlled-tab-example"
                         activeKey={key}
                         onSelect={(k) => setKey(k)}
+                        defaultActiveKey="eth"
                         className="mb-3 "
+                        variant="pills"
                     >
-                        <Tab eventKey="eth" title="ETH Transaction History">
+                        <Tab eventKey="eth" title="ETH Transaction History" variant="pills">
                             <Table bordered className='text-center'>
                                 <thead>
                                     <tr>
