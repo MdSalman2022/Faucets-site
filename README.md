@@ -1,3 +1,9 @@
+# Website name: Faucets 
+
+## `Site link`
+Open [https://faucets-salman.netlify.app/](https://faucets-salman.netlify.app/) to view it in browser.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
