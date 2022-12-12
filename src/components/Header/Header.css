@@ -1,0 +1,12 @@
+.wallet-btn{
+    padding: 5px 20px;
+    border: 2px solid #9b1fe9;
+    background: #fff;
+    color: #9b1fe9;
+    font-weight: 600;
+}
+.wallet-btn:hover{
+    background-color: #fff;
+    color: #9b1fe9;
+    border: 2px solid #9b1fe9;
+}
